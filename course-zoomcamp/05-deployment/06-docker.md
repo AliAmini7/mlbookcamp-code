@@ -18,7 +18,33 @@ To run docker without `sudo`, follow [this instruction](https://docs.docker.com/
 
 ### Windows
 
-Please send a PR!
+1- Use the following link to install ubuntu on windows 10:
+https://ubuntu.com/tutorials/ubuntu-on-windows#1-overview 
+note: I enabled WSL 2.
+
+2- Use the following in the Ubuntu terminal to install docker:
+
+```bash
+sudo apt-get install docker.io
+```
+3- You may need the following post-installation steps if you need to add your user to the docker group:
+
+```bash
+sudo groupadd docker
+```
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+```bash
+newgrp docker 
+```
+
+check if docker works fine: 
+```bash
+docker run hello-world
+```
 
 ### MacOS
 
